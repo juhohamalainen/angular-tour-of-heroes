@@ -1,6 +1,7 @@
-<!-- Component template, written in HTML -->
 <h1>{{title}}</h1>
-<!-- Display Heroes component -->
-<app-heroes></app-heroes>
-<!-- Display messages -->
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
 <app-messages></app-messages>
