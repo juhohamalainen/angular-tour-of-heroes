@@ -16,19 +16,22 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
+  // The imports array contains a list of Angular modules that this module depends on
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
 
-    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // The HttpClientInMemoryWebApiModule intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
+  // The declarations array contains a list of components, directives, and pipes
+  // that belong to this module.
   declarations: [
     AppComponent,
     DashboardComponent,
@@ -37,6 +40,9 @@ import { MessagesComponent } from './messages/messages.component';
     MessagesComponent,
     HeroSearchComponent
   ],
+  // The bootstrap array specifies the root component of the application.
+  // When Angular starts the application, it creates an instance of this component
+  // and inserts it into the DOM.
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

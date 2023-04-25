@@ -1,9 +1,14 @@
+<!-- HTML template for the hero search component -->
 <div id="search-component">
+  <!-- Label for search input box -->
   <label for="search-box">Hero Search</label>
+  <!-- Input box for searching heroes, triggers search() function when user inputs a value -->
   <input #searchBox id="search-box" (input)="search(searchBox.value)" />
-
+  <!-- Display search results as an unordered list -->
   <ul class="search-result">
+    <!-- Use *ngFor directive to loop through heroes$ observable and display each hero -->
     <li *ngFor="let hero of heroes$ | async" >
+      <!-- Use routerLink directive to create a link to hero details page for each hero -->
       <a routerLink="/detail/{{hero.id}}">
         {{hero.name}}
       </a>

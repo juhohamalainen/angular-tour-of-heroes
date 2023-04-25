@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root', // Declare that this service should be provided at the root level
 })
 export class MessageService {
-  messages: string[] = [];
+  messages: string[] = []; // Declare an array of messages
 
-  add(message: string) {
+  add(message: string) { // Define a method to add a new message to the array
     this.messages.push(message);
   }
 
-  clear() {
+  clear() { // Define a method to clear the array of messages
     this.messages = [];
   }
 }

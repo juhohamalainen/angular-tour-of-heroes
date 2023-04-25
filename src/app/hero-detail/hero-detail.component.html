@@ -1,10 +1,16 @@
 <div *ngIf="hero">
+  <!-- Display hero name in uppercase and the text "Details" -->
   <h2>{{hero.name | uppercase}} Details</h2>
+  <!-- Display hero id -->
   <div><span>id: </span>{{hero.id}}</div>
   <div>
+    <!-- Label for hero name input -->
     <label for="hero-name">Hero name: </label>
+      <!-- Input field to edit hero name using two-way data binding -->
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
   </div>
+  <!-- Button to navigate back to previous view, calls goBack() function -->
   <button type="button" (click)="goBack()">go back</button>
+  <!-- Button to save hero name, calls save() function -->
   <button type="button" (click)="save()">save</button>
 </div>

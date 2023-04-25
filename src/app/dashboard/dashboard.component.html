@@ -1,9 +1,13 @@
+<!-- Display a heading for the component -->
 <h2>Top Heroes</h2>
+
+<!-- Display a list of hero names using the Angular *ngFor directive -->
 <div class="heroes-menu">
-  <a *ngFor="let hero of heroes"
-      routerLink="/detail/{{hero.id}}">
-      {{hero.name}}
+  <a *ngFor="let hero of heroes" 
+     routerLink="/detail/{{hero.id}}">
+    {{hero.name}}
   </a>
 </div>
 
+<!-- Display the HeroSearchComponent -->
 <app-hero-search></app-hero-search>
